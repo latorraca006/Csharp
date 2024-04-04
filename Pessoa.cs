@@ -1,6 +1,6 @@
 public class Pessoa { 
     private String nome:
-    private int idade;
+    private descrição ;
     private String cpf;
 
     public Pessoa(string nome, int idade, string cpf) {
@@ -36,3 +36,36 @@ public class Estudante; Pessoa {
         set { curso = value}
     }
 }
+
+public class Funcionario : Pessoa {
+    private double salario;
+
+
+    public double Bonus() { 
+        return salario * 0.1;
+    }
+
+
+    public Funcionario(string nome, int idade, string cpf, double salario): base(nome, idade,cpf){ 
+        Salario = salario; 
+    }
+
+
+    public string Salario { 
+        get{ return salario;}
+        set{ salario = value;}
+      }
+    }
+
+    public Diretor : Funcionario { 
+        public Diretor(string nome, int idade, string cpf, double 
+        salario): base (nome, idade, cpf salario) {
+             
+        }
+
+        public overrider double Bonus{ 
+            return base .Bonus() + 1000;
+        }
+        
+
+    }
