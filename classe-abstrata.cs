@@ -121,9 +121,9 @@ class Program
 
         Violino violino = new Violino("acústico", 300, "2024", "preta", true);
         violino.tocar();
-        .Mover();
-        moto.parar();
-        moto.Desligar();           
+        Violino.Mover();
+        Violino.parar();
+        Violino.Desligar();           
 
     }
 }
